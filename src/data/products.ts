@@ -229,7 +229,7 @@ const FIRST_PRODUCTS: Product[] = [
         "Clever Signal Materialist: recipe costing software with SKU-level margin-drift " +
         "alerts for independent makers. Know the true cost of every product. In development.",
     },
-    accent: "#E8930C",
+    accent: "#E7566B",
     mascot: "/mascots/materialist.png",
     mascotAlt:
       "Dithered brand tile for Materialist: a realistic engraved owl portrait in black ink on solid amber",
@@ -377,7 +377,7 @@ const FIRST_PRODUCTS: Product[] = [
         "structured experiments, campaign tracking, customer cohorts, and an offer " +
         "laboratory. In development.",
     },
-    accent: "#84CC16",
+    accent: "#D25CB3",
     mascot: "/mascots/thrivepoint.png",
     screenshot: "/screenshots/thrivepoint.png",
     screenshotAlt: "Thrivepoint application window (in development)",
@@ -517,7 +517,7 @@ const MIDDLE_PRODUCTS: Product[] = [
         "Stockroom by Clever Signal: inventory and material management for small product " +
         "businesses — quantities, movements, costs, and reordering. Coming soon.",
     },
-    accent: "#2E7CD6",
+    accent: "#E16600",
     mascot: "/mascots/stockroom.png",
     mascotAlt:
       "Dithered brand tile for Stockroom: a realistic engraved ant portrait in black ink on solid blue",
@@ -659,7 +659,7 @@ const MIDDLE_PRODUCTS: Product[] = [
         "scheduling, material requirements, and job history for small manufacturers. " +
         "In development.",
     },
-    accent: "#E04E1A",
+    accent: "#BE8400",
     mascot: "/mascots/stagepoint.png",
     screenshot: "/screenshots/stagepoint.png",
     screenshotAlt: "StagePoint application window (in development)",
@@ -804,7 +804,7 @@ const MIDDLE_PRODUCTS: Product[] = [
         "independent sellers — lifecycle tracking, pick/pack queues, partial " +
         "fulfillment, and exceptions. In development.",
     },
-    accent: "#4C9A2A",
+    accent: "#7B9F00",
     mascot: "/mascots/orderly.png",
     screenshot: "/screenshots/orderly.png",
     screenshotAlt: "Orderly application window (in development)",
@@ -958,7 +958,7 @@ const MIDDLE_PRODUCTS: Product[] = [
         "food makers — revision-controlled formulas, batch scaling, substitutions, " +
         "and batch records. In development.",
     },
-    accent: "#8B5CF6",
+    accent: "#00AE65",
     mascot: "/mascots/elixer.png",
     screenshot: "/screenshots/elixer.png",
     screenshotAlt: "Elixer application window (in development)",
@@ -1110,7 +1110,7 @@ const FINAL_PRODUCTS: Product[] = [
         "Cutline by Clever Signal: nesting and cutting-layout software for workshops — " +
         "minimize waste, manage remnants, export machine-ready layouts. In development.",
     },
-    accent: "#D92B2B",
+    accent: "#00AEB1",
     mascot: "/mascots/cutline.png",
     screenshot: "/screenshots/cutline.png",
     screenshotAlt: "Cutline application window (in development)",
@@ -1261,7 +1261,7 @@ const FINAL_PRODUCTS: Product[] = [
         "gang sheet nesting, press recipes, and repeatable production jobs. Works " +
         "alongside your RIP. In development.",
     },
-    accent: "#C7369B",
+    accent: "#009EE7",
     mascot: "/mascots/sublium.png",
     screenshot: "/screenshots/sublium.png",
     screenshotAlt: "Sublium application window (in development)",
@@ -1428,7 +1428,7 @@ const FINAL_PRODUCTS: Product[] = [
         "hoop and machine compatibility, time and cost estimates. A companion to " +
         "digitizing software. In development.",
     },
-    accent: "#0FA3A3",
+    accent: "#5E86FC",
     mascot: "/mascots/threadcount.png",
     screenshot: "/screenshots/threadcount.png",
     screenshotAlt: "Threadcount application window (in development)",
@@ -1585,7 +1585,7 @@ const FINAL_PRODUCTS: Product[] = [
         "clothing — cataloging, measurements, defects, storage, listings, and sales. " +
         "Coming soon.",
     },
-    accent: "#93355F",
+    accent: "#A66EE8",
     mascot: "/mascots/wardrobe.png",
     mascotAlt:
       "Dithered brand tile for Wardrobe: a realistic engraved magpie portrait in black ink on solid plum",

@@ -22,16 +22,16 @@ INK = "#1B1B1B"
 
 # Adobe-style: one distinct brand color per product.
 COLORS = {
-    "materialist": "#E8930C",  # amber
-    "stockroom": "#2E7CD6",  # blue
-    "stagepoint": "#E04E1A",  # red-orange
-    "orderly": "#4C9A2A",  # leaf green
-    "elixer": "#8B5CF6",  # violet
-    "cutline": "#D92B2B",  # crimson
-    "sublium": "#C7369B",  # magenta
-    "threadcount": "#0FA3A3",  # teal
-    "wardrobe": "#93355F",  # plum
-    "thrivepoint": "#84CC16",  # lime
+    "materialist": "#E7566B",  # oklch red-pink (h=15)
+    "stockroom": "#E16600",  # oklch orange (h=51)
+    "stagepoint": "#BE8400",  # oklch gold (h=87)
+    "orderly": "#7B9F00",  # oklch olive (h=123)
+    "elixer": "#00AE65",  # oklch emerald (h=159)
+    "cutline": "#00AEB1",  # oklch cyan (h=195)
+    "sublium": "#009EE7",  # oklch sky blue (h=231)
+    "threadcount": "#5E86FC",  # oklch periwinkle (h=267)
+    "wardrobe": "#A66EE8",  # oklch violet (h=303)
+    "thrivepoint": "#D25CB3",  # oklch rose (h=339)
 }
 
 BAYER8 = [
