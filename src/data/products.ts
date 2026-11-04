@@ -233,6 +233,8 @@ const FIRST_PRODUCTS: Product[] = [
     mascot: "/mascots/materialist.png",
     mascotAlt:
       "Dithered brand tile for Materialist: a realistic engraved owl portrait in black ink on solid amber",
+    screenshot: "/screenshots/materialist.png",
+    screenshotAlt: "Materialist application window (in development)",
   },
   {
     id: "thrivepoint",
