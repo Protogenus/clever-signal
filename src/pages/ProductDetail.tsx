@@ -42,7 +42,7 @@ export function ProductDetail() {
               <div className="product-hero-meta">
                 <StatusBadge status={product.status} />
                 <span className="status-note">
-                  Status: {STATUS_LABELS[product.status]} — not yet available.
+                  Status: {STATUS_LABELS[product.status]}, not yet available.
                 </span>
               </div>
               <div className="hero-actions">
@@ -65,7 +65,7 @@ export function ProductDetail() {
       </section>
 
       {/* Real app screenshot (or mascot art where no app exists yet),
-          placed directly above "01 — The problem". */}
+          placed directly above "01: The problem". */}
       <section className="section product-shot-section">
         <div className="wrap">
           <figure className="product-shot">
@@ -133,7 +133,7 @@ export function ProductDetail() {
             ))}
           </div>
           <p className="fine-print">
-            Illustrative scenarios describing intended use — not customer
+            Illustrative scenarios describing intended use, not customer
             stories.
           </p>
         </div>
@@ -169,7 +169,7 @@ export function ProductDetail() {
           </h2>
           <p className="body-large">
             {product.name.replace("Clever Signal ", "")} is independently
-            useful — it doesn't require any other Clever Signal product. Where
+            useful, it doesn't require any other Clever Signal product. Where
             sharing information would genuinely help, optional connections to
             sibling products are planned:
           </p>
@@ -212,7 +212,7 @@ export function ProductDetail() {
             develops.
           </h2>
           <p className="section-intro">
-            {STATUS_LABELS[product.status]}. Tell us what you'd need it to do —
+            {STATUS_LABELS[product.status]}. Tell us what you'd need it to do,
             that feedback shapes what gets built.
           </p>
           <div className="hero-actions center">

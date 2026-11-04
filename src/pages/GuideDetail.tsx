@@ -14,7 +14,7 @@ export function GuideDetail() {
   return (
     <>
       <SeoHead
-        title={`${guide.title} — ${SITE.name}`}
+        title={`${guide.title}: ${SITE.name}`}
         description={guide.description}
         structuredData={{
           "@type": "HowTo",
@@ -59,7 +59,7 @@ export function GuideDetail() {
               <Link to={productUrl(product.slug)}>
                 {product.shortName ?? product.name}
               </Link>{" "}
-              — {STATUS_LABELS[product.status].toLowerCase()}, not yet
+              , {STATUS_LABELS[product.status].toLowerCase()}, not yet
               available.
             </p>
           )}
@@ -111,7 +111,7 @@ export function GuideDetail() {
                   <h3>{s.title}</h3>
                   <p>{s.body}</p>
                   <p className="guide-tip">
-                    <strong>Tip — </strong>
+                    <strong>Tip: </strong>
                     {s.tip}
                   </p>
                 </div>

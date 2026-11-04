@@ -37,7 +37,7 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
       <Link
         to={productUrl(product.slug)}
         className="lineup-panel"
-        aria-label={`${displayName} — ${eyebrow}`}
+        aria-label={`${displayName}: ${eyebrow}`}
       >
         <img
           src={visualSrc}

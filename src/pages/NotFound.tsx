@@ -5,7 +5,7 @@ export function NotFound() {
   return (
     <>
       <SeoHead
-        title="Page not found — Clever Signal"
+        title="Page not found: Clever Signal"
         description="The page you're looking for doesn't exist. Browse the Clever Signal product directory instead."
       />
       <section className="page-hero">
@@ -14,7 +14,7 @@ export function NotFound() {
             Nothing <em>here.</em>
           </h1>
           <p className="lede">
-            That page doesn't exist. The products do — start there.
+            That page doesn't exist. The products do. Start there.
           </p>
           <div className="hero-actions center">
             <Link to="/products" className="btn btn-primary">

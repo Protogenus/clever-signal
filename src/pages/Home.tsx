@@ -8,17 +8,17 @@ import { ProductCard } from "../components/ProductCard.tsx";
 const ECOSYSTEM_GROUPS: { title: string; body: string; slugs: string[] }[] = [
   {
     title: "Make",
-    body: "Formulas, materials, production runs, and true costs — the work of creating the product.",
+    body: "Formulas, materials, production runs, and true costs: the work of creating the product.",
     slugs: ["elixer", "stockroom", "stagepoint", "materialist", "cutline"],
   },
   {
     title: "Sell",
-    body: "Orders, fulfillment, and growth — the work of getting the product to customers and learning what works.",
+    body: "Orders, fulfillment, and growth: the work of getting the product to customers and learning what works.",
     slugs: ["orderly", "thrivepoint", "wardrobe"],
   },
   {
     title: "Specialize",
-    body: "Deep tools for specific crafts — sublimation and embroidery — that respect the software you already use.",
+    body: "Deep tools for specific crafts, sublimation and embroidery, that respect the software you already use.",
     slugs: ["sublium", "threadcount"],
   },
 ];
@@ -28,7 +28,7 @@ export function Home() {
   return (
     <>
       <SeoHead
-        title="Clever Signal — Software for the people who make things."
+        title="Clever Signal: Software for the people who make things."
         description="Clever Signal builds thoughtful software for businesses that make, produce, sell, and manage physical products. Explore the product family: costing, inventory, production, orders, formulas, cutting, sublimation, embroidery, resale, and growth."
         structuredData={[
           organizationJsonLd,
@@ -50,7 +50,7 @@ export function Home() {
           <p className="lede">
             Clever Signal builds thoughtful tools for the businesses behind
             physical products. From materials and production to orders,
-            formulas, and fulfillment — each application solves a real part of
+            formulas, and fulfillment, each application solves a real part of
             the work.
           </p>
           <div className="hero-actions">
@@ -76,14 +76,14 @@ export function Home() {
               processes, production decisions, and operational details that keep
               independent businesses moving. We build specialist software for
               businesses that make, produce, sell, and manage physical
-              products — makers, small manufacturers, independent sellers, and
+              products: makers, small manufacturers, independent sellers, and
               craft businesses.
             </p>
             <p>
               Generic business software treats a candle studio, a sublimation
               shop, and an embroidery business as the same company. They aren't.
               Each Clever Signal application addresses a specific operational
-              problem that generic platforms overlook — and each one is useful
+              problem that generic platforms overlook, and each one is useful
               on its own, with optional connections to the others where that
               genuinely helps.
             </p>
@@ -99,7 +99,7 @@ export function Home() {
           </h2>
           <p className="section-intro">
             Every product is independently useful. Browse the directory, then
-            open any product page for the full story — its purpose, its
+            open any product page for the full story: its purpose, its
             features, and how it's used.
           </p>
           <div className="card-grid">
@@ -125,8 +125,8 @@ export function Home() {
             The applications complement one another, but none of them requires
             another. Each product owns its own records and does its own job
             well on its own. Where two products can share information usefully
-            — material costs flowing into recipe costing, orders feeding
-            production planning — those connections are planned as optional
+            , material costs flowing into recipe costing, orders feeding
+            production planning, those connections are planned as optional
             data exchanges, never as requirements.
           </p>
           <div className="eco-grid">
@@ -153,7 +153,7 @@ export function Home() {
             <p>
               These products are not one monolithic application, and this site
               doesn't present them as one. Integrations between products are
-              planned capabilities — we describe what they would do, not what
+              planned capabilities, we describe what they would do, not what
               they already do. Nothing here is for sale yet; every product page
               carries its honest status.
             </p>
@@ -169,7 +169,7 @@ export function Home() {
           </h2>
           <p className="section-intro">
             Every product page explains the problem it solves, who it's for,
-            and how the work flows through it — in concrete terms, not slogans.
+            and how the work flows through it, in concrete terms, not slogans.
           </p>
           <div className="hero-actions center">
             <Link to="/products" className="btn btn-primary">

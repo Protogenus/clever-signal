@@ -14,7 +14,7 @@ function ScrollToTop() {
 
 function FooterBadge() {
   return (
-    <Link to="/" className="footer-badge-link" aria-label="Clever Signal — home">
+    <Link to="/" className="footer-badge-link" aria-label="Clever Signal home">
       <img src="/logo-badge.png" alt="Clever Signal" className="footer-badge" />
     </Link>
   );
@@ -112,7 +112,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-/** Small "SEC.01 —" style section label, after the reference site's voice. */
+/** Small "SEC.01:" style section label, after the reference site's voice. */
 export function SectionLabel({
   index,
   label,
@@ -122,7 +122,7 @@ export function SectionLabel({
 }) {
   return (
     <p className="section-label">
-      <span>{index}</span> — {label}
+      <span>{index}</span>: {label}
     </p>
   );
 }

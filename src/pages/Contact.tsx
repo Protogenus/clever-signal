@@ -13,7 +13,7 @@ export function Contact() {
     <>
       <SeoHead
         title="Contact Clever Signal"
-        description="Get in touch with Clever Signal — questions about the products, feedback on what we're building, or anything else. Contact details published here as they're confirmed."
+        description="Get in touch with Clever Signal: questions about the products, feedback on what we're building, or anything else. Contact details published here as they're confirmed."
         structuredData={[
           organizationJsonLd,
           {
@@ -31,7 +31,7 @@ export function Contact() {
           </h1>
           <p className="lede">
             Questions about a product, feedback on what we're building, or a
-            problem you think we should solve — we'd like to hear it.
+            problem you think we should solve, we'd like to hear it.
           </p>
         </div>
       </section>
@@ -48,7 +48,7 @@ export function Contact() {
                     <a href={`mailto:${email}`}>{email}</a>
                   ) : (
                     <span className="tbd">
-                      To be announced — check back soon.
+                      To be announced, check back soon.
                     </span>
                   )}
                 </dd>
@@ -68,7 +68,7 @@ export function Contact() {
                     </ul>
                   ) : (
                     <span className="tbd">
-                      To be announced — check back soon.
+                      To be announced, check back soon.
                     </span>
                   )}
                 </dd>

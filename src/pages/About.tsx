@@ -7,7 +7,7 @@ export function About() {
   return (
     <>
       <SeoHead
-        title="About Clever Signal — Specialist Software for Makers"
+        title="About Clever Signal: Specialist Software for Makers"
         description="Clever Signal exists to build software around the work that actually happens: the small calculations, repeated processes, and operational details that keep independent businesses moving."
         structuredData={[
           organizationJsonLd,
@@ -32,7 +32,7 @@ export function About() {
           </p>
           <img
             src="/logo.png"
-            alt="Clever Signal — lighthouse mark and wordmark"
+            alt="Clever Signal lighthouse mark and wordmark"
             className="about-lockup"
           />
         </div>
@@ -54,7 +54,7 @@ export function About() {
           <p className="body-large">
             A candle maker pricing a batch, a sublimation shop nesting a gang
             sheet, an embroiderer checking whether a file will run on their
-            machine — these are real moments with real stakes, and they deserve
+            machine, these are real moments with real stakes, and they deserve
             software designed around them rather than adapted to them.
           </p>
         </div>
@@ -94,9 +94,9 @@ export function About() {
             <li>
               <h3>Built for the work</h3>
               <p>
-                Features come from operational reality — the batch that needs
+                Features come from operational reality: the batch that needs
                 costing, the order that needs packing, the file that needs
-                checking — not from a feature matrix.
+                checking, not from a feature matrix.
               </p>
             </li>
           </ul>

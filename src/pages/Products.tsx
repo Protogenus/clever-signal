@@ -9,7 +9,7 @@ export function Products() {
   return (
     <>
       <SeoHead
-        title="Product Directory — All Clever Signal Applications"
+        title="Product Directory: All Clever Signal Applications"
         description="The complete Clever Signal product directory: Materialist, Stockroom, StagePoint, Orderly, Elixer, Cutline, Sublium, Threadcount, Wardrobe, and Thrivepoint. Specialist software for makers, manufacturers, and sellers."
         structuredData={[
           organizationJsonLd,
@@ -33,7 +33,7 @@ export function Products() {
           </h1>
           <p className="lede">
             Ten specialist applications for the businesses behind physical
-            products. Each one solves a specific operational problem — and each
+            products. Each one solves a specific operational problem, and each
             one stands on its own.
           </p>
         </div>

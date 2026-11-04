@@ -1,4 +1,4 @@
-/* Clever Signal — visual language.
+/* Clever Signal: visual language.
    Warm cream ground, near-black ink, serif display type with italic accents,
    pastel product accents. Echoes the reference site's bold typography and
    dithered texture without copying it. */
@@ -449,7 +449,7 @@ svg {
   text-decoration: underline;
 }
 
-/* Product page: large app screenshot above "01 — The problem". */
+/* Product page: large app screenshot above "01: The problem". */
 .product-shot-section {
   padding-bottom: 0;
 }
@@ -610,7 +610,7 @@ svg {
   font-size: 1.05rem;
 }
 .check-list li::before {
-  content: "—";
+  content: "-";
   position: absolute;
   left: 0;
   color: var(--ink-faint);

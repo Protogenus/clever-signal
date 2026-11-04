@@ -9,11 +9,11 @@ export function Guides() {
   return (
     <>
       <SeoHead
-        title={`Guides — ${SITE.name}`}
+        title={`Guides: ${SITE.name}`}
         description="Practical, step-by-step guides to getting real work done with Clever Signal products. Start with the Materialist pricing workflow."
         structuredData={{
           "@type": "CollectionPage",
-          name: `Guides — ${SITE.name}`,
+          name: `Guides: ${SITE.name}`,
           url: `${SITE.canonicalBase}/guides`,
           description:
             "Step-by-step guides to Clever Signal product workflows.",
@@ -28,7 +28,7 @@ export function Guides() {
           </h1>
           <p className="product-positioning">
             Short, practical walkthroughs of how each Clever Signal product is
-            actually used — the process, step by step, with the reasoning
+            actually used: the process, step by step, with the reasoning
             behind each one.
           </p>
         </div>
@@ -47,7 +47,7 @@ export function Guides() {
                   style={{ borderTopColor: product?.accent ?? "var(--line)" }}
                 >
                   <p className="guide-card-kicker">
-                    {String(i + 1).padStart(2, "0")} —{" "}
+                    {String(i + 1).padStart(2, "0")}:{" "}
                     {product ? (
                       <Link to={productUrl(product.slug)}>
                         {product.shortName ?? product.name}
@@ -72,7 +72,7 @@ export function Guides() {
           </div>
           <p className="fine-print">
             More guides are on the way as products mature. Each guide describes
-            intended workflows — planned design intent, not shipped
+            intended workflows, planned design intent, not shipped
             functionality.
           </p>
         </div>
