@@ -232,7 +232,7 @@ const FIRST_PRODUCTS: Product[] = [
     accent: "#E7566B",
     mascot: "/mascots/materialist.png",
     mascotAlt:
-      "Dithered brand tile for Materialist: a realistic engraved owl portrait in black ink on solid amber",
+      "Dithered brand tile for Materialist: a realistic engraved owl portrait in black ink on solid red",
     screenshot: "/screenshots/materialist.png",
     screenshotAlt: "Materialist application window (in development)",
   },
@@ -382,7 +382,7 @@ const FIRST_PRODUCTS: Product[] = [
     screenshot: "/screenshots/thrivepoint.png",
     screenshotAlt: "Thrivepoint application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Thrivepoint: a realistic engraved rabbit portrait in black ink on solid lime green",
+      "Dithered brand tile for Thrivepoint: a realistic engraved rabbit portrait in black ink on solid pink",
   },
 ];
 
@@ -520,7 +520,7 @@ const MIDDLE_PRODUCTS: Product[] = [
     accent: "#E16600",
     mascot: "/mascots/stockroom.png",
     mascotAlt:
-      "Dithered brand tile for Stockroom: a realistic engraved ant portrait in black ink on solid blue",
+      "Dithered brand tile for Stockroom: a realistic engraved ant portrait in black ink on solid orange",
   },
   {
     id: "stagepoint",
@@ -664,7 +664,7 @@ const MIDDLE_PRODUCTS: Product[] = [
     screenshot: "/screenshots/stagepoint.png",
     screenshotAlt: "StagePoint application window (in development)",
     mascotAlt:
-      "Dithered brand tile for StagePoint: a realistic engraved beaver portrait in black ink on solid red-orange",
+      "Dithered brand tile for StagePoint: a realistic engraved beaver portrait in black ink on solid gold",
   },
   {
     id: "orderly",
@@ -809,7 +809,7 @@ const MIDDLE_PRODUCTS: Product[] = [
     screenshot: "/screenshots/orderly.png",
     screenshotAlt: "Orderly application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Orderly: a realistic engraved pigeon portrait in black ink on solid leaf green",
+      "Dithered brand tile for Orderly: a realistic engraved pigeon portrait in black ink on solid olive green",
   },
   {
     id: "elixer",
@@ -963,7 +963,7 @@ const MIDDLE_PRODUCTS: Product[] = [
     screenshot: "/screenshots/elixer.png",
     screenshotAlt: "Elixer application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Elixer: a realistic engraved cat portrait in black ink on solid violet",
+      "Dithered brand tile for Elixer: a realistic engraved cat portrait in black ink on solid emerald green",
   },
 ];
 
@@ -1115,7 +1115,7 @@ const FINAL_PRODUCTS: Product[] = [
     screenshot: "/screenshots/cutline.png",
     screenshotAlt: "Cutline application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Cutline: a realistic engraved heron portrait in black ink on solid crimson",
+      "Dithered brand tile for Cutline: a realistic engraved heron portrait in black ink on solid cyan",
   },
   {
     id: "sublium",
@@ -1266,7 +1266,7 @@ const FINAL_PRODUCTS: Product[] = [
     screenshot: "/screenshots/sublium.png",
     screenshotAlt: "Sublium application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Sublium: a realistic engraved chameleon portrait in black ink on solid magenta",
+      "Dithered brand tile for Sublium: a realistic engraved chameleon portrait in black ink on solid sky blue",
   },
   {
     id: "threadcount",
@@ -1433,7 +1433,7 @@ const FINAL_PRODUCTS: Product[] = [
     screenshot: "/screenshots/threadcount.png",
     screenshotAlt: "Threadcount application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Threadcount: a realistic engraved spider portrait in black ink on solid teal",
+      "Dithered brand tile for Threadcount: a realistic engraved spider portrait in black ink on solid periwinkle blue",
   },
   {
     id: "wardrobe",
@@ -1588,7 +1588,7 @@ const FINAL_PRODUCTS: Product[] = [
     accent: "#A66EE8",
     mascot: "/mascots/wardrobe.png",
     mascotAlt:
-      "Dithered brand tile for Wardrobe: a realistic engraved magpie portrait in black ink on solid plum",
+      "Dithered brand tile for Wardrobe: a realistic engraved magpie portrait in black ink on solid purple",
   },
 ];
 
