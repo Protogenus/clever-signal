@@ -37,7 +37,7 @@ export function ProductDetail() {
           </p>
           <div className="product-hero-grid">
             <div>
-              <h1>{product.name}</h1>
+              <h1 style={{ color: product.accent }}>{product.name}</h1>
               <p className="product-positioning">{product.positioning}</p>
               <div className="product-hero-meta">
                 <StatusBadge status={product.status} />

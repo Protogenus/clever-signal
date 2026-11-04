@@ -54,7 +54,7 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
           className="lineup-tile"
           loading="lazy"
         />
-        <h3 className="lineup-name">
+        <h3 className="lineup-name" style={{ color: product.accent }}>
           <Link to={productUrl(product.slug)}>{displayName}</Link>
         </h3>
         <p className="lineup-desc">{product.shortDescription}</p>
