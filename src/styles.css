@@ -363,12 +363,18 @@ svg {
 .lineup-panel {
   display: block;
   line-height: 0;
+  overflow: hidden;
 }
 .lineup-panel-art {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
+  transition: transform 0.35s ease;
+}
+.lineup-card:hover .lineup-panel-art {
+  transform: scale(1.7);
+  cursor: zoom-in;
 }
 .lineup-body {
   padding: 0 1.4rem 1.5rem;
@@ -448,6 +454,11 @@ svg {
 .product-shot img {
   width: 100%;
   display: block;
+  transition: transform 0.35s ease;
+}
+.product-shot:hover img {
+  transform: scale(1.85);
+  cursor: zoom-in;
 }
 
 /* Dark band headings */
