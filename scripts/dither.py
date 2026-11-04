@@ -22,16 +22,16 @@ INK = "#1B1B1B"
 
 # Adobe-style: one distinct brand color per product.
 COLORS = {
-    "materialist": "#E7566B",  # oklch red-pink (h=15)
-    "stockroom": "#E16600",  # oklch orange (h=51)
-    "stagepoint": "#BE8400",  # oklch gold (h=87)
-    "orderly": "#7B9F00",  # oklch olive (h=123)
-    "elixer": "#00AE65",  # oklch emerald (h=159)
-    "cutline": "#00AEB1",  # oklch cyan (h=195)
-    "sublium": "#009EE7",  # oklch sky blue (h=231)
-    "threadcount": "#5E86FC",  # oklch periwinkle (h=267)
-    "wardrobe": "#A66EE8",  # oklch violet (h=303)
-    "thrivepoint": "#D25CB3",  # oklch rose (h=339)
+    "materialist": "#CE8900",  # oklch amber (L.68 C.17 h80)
+    "stockroom": "#985531",  # oklch chocolate brown (L.52 C.11 h55)
+    "stagepoint": "#C90042",  # oklch crimson red (L.52 C.22 h22)
+    "orderly": "#42997B",  # oklch sea green (L.60 C.17 h145)
+    "elixer": "#8B61E3",  # oklch purple (L.60 C.19 h295)
+    "cutline": "#00ABAD",  # oklch cyan (L.65 C.16 h195)
+    "sublium": "#076BE3",  # oklch true blue (L.55 C.20 h258)
+    "threadcount": "#D655BE",  # oklch magenta (L.65 C.20 h335)
+    "wardrobe": "#BF4215",  # oklch terracotta (L.55 C.17 h38)
+    "thrivepoint": "#A2B000",  # oklch lime (L.72 C.17 h115)
 }
 
 BAYER8 = [

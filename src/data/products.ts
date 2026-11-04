@@ -229,10 +229,10 @@ const FIRST_PRODUCTS: Product[] = [
         "Clever Signal Materialist: recipe costing software with SKU-level margin-drift " +
         "alerts for independent makers. Know the true cost of every product. In development.",
     },
-    accent: "#E7566B",
+    accent: "#CE8900",
     mascot: "/mascots/materialist.png",
     mascotAlt:
-      "Dithered brand tile for Materialist: a realistic engraved owl portrait in black ink on solid red",
+      "Dithered brand tile for Materialist: a realistic engraved owl portrait in black ink on solid amber",
     screenshot: "/screenshots/materialist.png",
     screenshotAlt: "Materialist application window (in development)",
   },
@@ -377,12 +377,12 @@ const FIRST_PRODUCTS: Product[] = [
         "structured experiments, campaign tracking, customer cohorts, and an offer " +
         "laboratory. In development.",
     },
-    accent: "#D25CB3",
+    accent: "#A2B000",
     mascot: "/mascots/thrivepoint.png",
     screenshot: "/screenshots/thrivepoint.png",
     screenshotAlt: "Thrivepoint application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Thrivepoint: a realistic engraved rabbit portrait in black ink on solid pink",
+      "Dithered brand tile for Thrivepoint: a realistic engraved rabbit portrait in black ink on solid lime green",
   },
 ];
 
@@ -517,10 +517,10 @@ const MIDDLE_PRODUCTS: Product[] = [
         "Stockroom by Clever Signal: inventory and material management for small product " +
         "businesses — quantities, movements, costs, and reordering. Coming soon.",
     },
-    accent: "#E16600",
+    accent: "#985531",
     mascot: "/mascots/stockroom.png",
     mascotAlt:
-      "Dithered brand tile for Stockroom: a realistic engraved ant portrait in black ink on solid orange",
+      "Dithered brand tile for Stockroom: a realistic engraved ant portrait in black ink on solid brown",
   },
   {
     id: "stagepoint",
@@ -659,12 +659,12 @@ const MIDDLE_PRODUCTS: Product[] = [
         "scheduling, material requirements, and job history for small manufacturers. " +
         "In development.",
     },
-    accent: "#BE8400",
+    accent: "#C90042",
     mascot: "/mascots/stagepoint.png",
     screenshot: "/screenshots/stagepoint.png",
     screenshotAlt: "StagePoint application window (in development)",
     mascotAlt:
-      "Dithered brand tile for StagePoint: a realistic engraved beaver portrait in black ink on solid gold",
+      "Dithered brand tile for StagePoint: a realistic engraved beaver portrait in black ink on solid crimson red",
   },
   {
     id: "orderly",
@@ -804,12 +804,12 @@ const MIDDLE_PRODUCTS: Product[] = [
         "independent sellers — lifecycle tracking, pick/pack queues, partial " +
         "fulfillment, and exceptions. In development.",
     },
-    accent: "#7B9F00",
+    accent: "#42997B",
     mascot: "/mascots/orderly.png",
     screenshot: "/screenshots/orderly.png",
     screenshotAlt: "Orderly application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Orderly: a realistic engraved pigeon portrait in black ink on solid olive green",
+      "Dithered brand tile for Orderly: a realistic engraved pigeon portrait in black ink on solid sea green",
   },
   {
     id: "elixer",
@@ -958,12 +958,12 @@ const MIDDLE_PRODUCTS: Product[] = [
         "food makers — revision-controlled formulas, batch scaling, substitutions, " +
         "and batch records. In development.",
     },
-    accent: "#00AE65",
+    accent: "#8B61E3",
     mascot: "/mascots/elixer.png",
     screenshot: "/screenshots/elixer.png",
     screenshotAlt: "Elixer application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Elixer: a realistic engraved cat portrait in black ink on solid emerald green",
+      "Dithered brand tile for Elixer: a realistic engraved cat portrait in black ink on solid purple",
   },
 ];
 
@@ -1110,7 +1110,7 @@ const FINAL_PRODUCTS: Product[] = [
         "Cutline by Clever Signal: nesting and cutting-layout software for workshops — " +
         "minimize waste, manage remnants, export machine-ready layouts. In development.",
     },
-    accent: "#00AEB1",
+    accent: "#00ABAD",
     mascot: "/mascots/cutline.png",
     screenshot: "/screenshots/cutline.png",
     screenshotAlt: "Cutline application window (in development)",
@@ -1261,12 +1261,12 @@ const FINAL_PRODUCTS: Product[] = [
         "gang sheet nesting, press recipes, and repeatable production jobs. Works " +
         "alongside your RIP. In development.",
     },
-    accent: "#009EE7",
+    accent: "#076BE3",
     mascot: "/mascots/sublium.png",
     screenshot: "/screenshots/sublium.png",
     screenshotAlt: "Sublium application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Sublium: a realistic engraved chameleon portrait in black ink on solid sky blue",
+      "Dithered brand tile for Sublium: a realistic engraved chameleon portrait in black ink on solid blue",
   },
   {
     id: "threadcount",
@@ -1428,12 +1428,12 @@ const FINAL_PRODUCTS: Product[] = [
         "hoop and machine compatibility, time and cost estimates. A companion to " +
         "digitizing software. In development.",
     },
-    accent: "#5E86FC",
+    accent: "#D655BE",
     mascot: "/mascots/threadcount.png",
     screenshot: "/screenshots/threadcount.png",
     screenshotAlt: "Threadcount application window (in development)",
     mascotAlt:
-      "Dithered brand tile for Threadcount: a realistic engraved spider portrait in black ink on solid periwinkle blue",
+      "Dithered brand tile for Threadcount: a realistic engraved spider portrait in black ink on solid magenta",
   },
   {
     id: "wardrobe",
@@ -1585,10 +1585,10 @@ const FINAL_PRODUCTS: Product[] = [
         "clothing — cataloging, measurements, defects, storage, listings, and sales. " +
         "Coming soon.",
     },
-    accent: "#A66EE8",
+    accent: "#BF4215",
     mascot: "/mascots/wardrobe.png",
     mascotAlt:
-      "Dithered brand tile for Wardrobe: a realistic engraved magpie portrait in black ink on solid purple",
+      "Dithered brand tile for Wardrobe: a realistic engraved magpie portrait in black ink on solid terracotta",
   },
 ];
 
