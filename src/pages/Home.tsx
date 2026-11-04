@@ -90,7 +90,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section section-tint">
+      <section className="section section-dark">
         <div className="wrap">
           <SectionLabel index="SEC.02" label="Product directory" />
           <h2>
@@ -102,12 +102,12 @@ export function Home() {
             features, and how it's used.
           </p>
           <div className="card-grid">
-            {products.map((p) => (
-              <ProductCard key={p.slug} product={p} />
+            {products.map((p, i) => (
+              <ProductCard key={p.slug} product={p} index={i} />
             ))}
           </div>
           <p className="center">
-            <Link to="/products" className="btn btn-secondary">
+            <Link to="/products" className="btn btn-ghost">
               View the full directory →
             </Link>
           </p>

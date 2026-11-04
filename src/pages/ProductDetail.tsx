@@ -3,7 +3,6 @@ import { SITE, STATUS_LABELS } from "../data/site.ts";
 import { getProduct, productUrl } from "../data/products.ts";
 import { SeoHead } from "../components/SeoHead.tsx";
 import { SectionLabel } from "../components/Layout.tsx";
-import { Halftone } from "../components/Halftone.tsx";
 import { StatusBadge } from "../components/ProductCard.tsx";
 
 export function ProductDetail() {
@@ -55,12 +54,11 @@ export function ProductDetail() {
                 </Link>
               </div>
             </div>
-            <Halftone
-              seed={product.artSeed}
-              accent={product.accent}
-              alt={product.artAlt}
-              idPrefix={`hero-${product.slug}`}
+            <img
+              src={product.mascot}
+              alt={product.mascotAlt}
               className="product-hero-art"
+              style={{ border: `4px solid ${product.accent}` }}
             />
           </div>
         </div>

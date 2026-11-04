@@ -38,11 +38,11 @@ export function Products() {
           </p>
         </div>
       </section>
-      <section className="section">
+      <section className="section section-dark">
         <div className="wrap">
           <div className="card-grid">
-            {products.map((p) => (
-              <ProductCard key={p.slug} product={p} />
+            {products.map((p, i) => (
+              <ProductCard key={p.slug} product={p} index={i} />
             ))}
           </div>
         </div>

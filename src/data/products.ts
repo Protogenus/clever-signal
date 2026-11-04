@@ -56,12 +56,14 @@ export interface Product {
   integrations: IntegrationLink[];
   cta: ProductCta;
   seo: { title: string; description: string };
-  /** Brand accent used by the generative artwork. */
+  /** Short display name used on product cards (falls back to name). */
+  shortName?: string;
+  /** Brand color — one distinct Adobe-style color per product. */
   accent: string;
-  /** Seed for the generative halftone artwork. */
-  artSeed: number;
-  /** Descriptive alt text for the artwork. */
-  artAlt: string;
+  /** Path to the dithered mascot image (public/mascots/<slug>.png). */
+  mascot: string;
+  /** Descriptive alt text for the mascot image. */
+  mascotAlt: string;
 }
 
 const contactCta = (name: string): ProductCta => ({
@@ -73,6 +75,7 @@ const FIRST_PRODUCTS: Product[] = [
   {
     id: "materialist",
     name: "Clever Signal Materialist",
+    shortName: "Materialist",
     slug: "materialist",
     category: "Recipe costing & margin tracking",
     status: "in-development",
@@ -215,10 +218,10 @@ const FIRST_PRODUCTS: Product[] = [
         "Clever Signal Materialist: recipe costing software with SKU-level margin-drift " +
         "alerts for independent makers. Know the true cost of every product. In development.",
     },
-    accent: "#c97b4a",
-    artSeed: 11,
-    artAlt:
-      "Abstract generative halftone artwork in warm amber tones for Clever Signal Materialist",
+    accent: "#E8930C",
+    mascot: "/mascots/materialist.png",
+    mascotAlt:
+      "Dithered brand tile for Materialist: a realistic engraved owl portrait in black ink on solid amber",
   },
   {
     id: "thrivepoint",
@@ -361,10 +364,10 @@ const FIRST_PRODUCTS: Product[] = [
         "structured experiments, campaign tracking, customer cohorts, and an offer " +
         "laboratory. In development.",
     },
-    accent: "#7a9b5a",
-    artSeed: 23,
-    artAlt:
-      "Abstract generative halftone artwork in sage green tones for Thrivepoint",
+    accent: "#84CC16",
+    mascot: "/mascots/thrivepoint.png",
+    mascotAlt:
+      "Dithered brand tile for Thrivepoint: a realistic engraved rabbit portrait in black ink on solid lime green",
   },
 ];
 
@@ -499,10 +502,10 @@ const MIDDLE_PRODUCTS: Product[] = [
         "Stockroom by Clever Signal: inventory and material management for small product " +
         "businesses — quantities, movements, costs, and reordering. Coming soon.",
     },
-    accent: "#8a7fb8",
-    artSeed: 37,
-    artAlt:
-      "Abstract generative halftone artwork in dusty violet tones for Stockroom",
+    accent: "#2E7CD6",
+    mascot: "/mascots/stockroom.png",
+    mascotAlt:
+      "Dithered brand tile for Stockroom: a realistic engraved ant portrait in black ink on solid blue",
   },
   {
     id: "stagepoint",
@@ -641,10 +644,10 @@ const MIDDLE_PRODUCTS: Product[] = [
         "scheduling, material requirements, and job history for small manufacturers. " +
         "In development.",
     },
-    accent: "#4a8ac9",
-    artSeed: 51,
-    artAlt:
-      "Abstract generative halftone artwork in dusty blue tones for StagePoint",
+    accent: "#E04E1A",
+    mascot: "/mascots/stagepoint.png",
+    mascotAlt:
+      "Dithered brand tile for StagePoint: a realistic engraved beaver portrait in black ink on solid red-orange",
   },
   {
     id: "orderly",
@@ -783,10 +786,10 @@ const MIDDLE_PRODUCTS: Product[] = [
         "independent sellers — lifecycle tracking, pick/pack queues, partial " +
         "fulfillment, and exceptions. In development.",
     },
-    accent: "#c9a44a",
-    artSeed: 67,
-    artAlt:
-      "Abstract generative halftone artwork in warm gold tones for Orderly",
+    accent: "#4C9A2A",
+    mascot: "/mascots/orderly.png",
+    mascotAlt:
+      "Dithered brand tile for Orderly: a realistic engraved pigeon portrait in black ink on solid leaf green",
   },
   {
     id: "elixer",
@@ -934,10 +937,10 @@ const MIDDLE_PRODUCTS: Product[] = [
         "food makers — revision-controlled formulas, batch scaling, substitutions, " +
         "and batch records. In development.",
     },
-    accent: "#b85c5c",
-    artSeed: 83,
-    artAlt:
-      "Abstract generative halftone artwork in warm terracotta tones for Elixer",
+    accent: "#8B5CF6",
+    mascot: "/mascots/elixer.png",
+    mascotAlt:
+      "Dithered brand tile for Elixer: a realistic engraved cat portrait in black ink on solid violet",
   },
 ];
 
@@ -1083,10 +1086,10 @@ const FINAL_PRODUCTS: Product[] = [
         "Cutline by Clever Signal: nesting and cutting-layout software for workshops — " +
         "minimize waste, manage remnants, export machine-ready layouts. In development.",
     },
-    accent: "#5a8a7a",
-    artSeed: 97,
-    artAlt:
-      "Abstract generative halftone artwork in deep teal tones for Cutline",
+    accent: "#D92B2B",
+    mascot: "/mascots/cutline.png",
+    mascotAlt:
+      "Dithered brand tile for Cutline: a realistic engraved heron portrait in black ink on solid crimson",
   },
   {
     id: "sublium",
@@ -1232,10 +1235,10 @@ const FINAL_PRODUCTS: Product[] = [
         "gang sheet nesting, press recipes, and repeatable production jobs. Works " +
         "alongside your RIP. In development.",
     },
-    accent: "#c96a8a",
-    artSeed: 113,
-    artAlt:
-      "Abstract generative halftone artwork in warm rose tones for Sublium",
+    accent: "#C7369B",
+    mascot: "/mascots/sublium.png",
+    mascotAlt:
+      "Dithered brand tile for Sublium: a realistic engraved chameleon portrait in black ink on solid magenta",
   },
   {
     id: "threadcount",
@@ -1397,10 +1400,10 @@ const FINAL_PRODUCTS: Product[] = [
         "hoop and machine compatibility, time and cost estimates. A companion to " +
         "digitizing software. In development.",
     },
-    accent: "#7a6ac9",
-    artSeed: 131,
-    artAlt:
-      "Abstract generative halftone artwork in indigo tones for Threadcount",
+    accent: "#0FA3A3",
+    mascot: "/mascots/threadcount.png",
+    mascotAlt:
+      "Dithered brand tile for Threadcount: a realistic engraved spider portrait in black ink on solid teal",
   },
   {
     id: "wardrobe",
@@ -1551,10 +1554,10 @@ const FINAL_PRODUCTS: Product[] = [
         "clothing — cataloging, measurements, defects, storage, listings, and sales. " +
         "Coming soon.",
     },
-    accent: "#4a9b8a",
-    artSeed: 149,
-    artAlt:
-      "Abstract generative halftone artwork in sea-green tones for Wardrobe",
+    accent: "#93355F",
+    mascot: "/mascots/wardrobe.png",
+    mascotAlt:
+      "Dithered brand tile for Wardrobe: a realistic engraved magpie portrait in black ink on solid plum",
   },
 ];
 

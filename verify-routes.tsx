@@ -9,6 +9,7 @@ import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router";
 import { Routes, Route } from "react-router-dom";
+import { existsSync } from "node:fs";
 import { Layout } from "./src/components/Layout.tsx";
 import { Home } from "./src/pages/Home.tsx";
 import { Products } from "./src/pages/Products.tsx";
@@ -80,7 +81,12 @@ for (const p of products) {
   ok(p.integrations.length >= 2, `${tag} >=2 integrations (got ${p.integrations.length})`);
   ok(p.audience.length >= 2, `${tag} >=2 audience entries`);
   ok(/^#[0-9a-f]{6}$/i.test(p.accent), `${tag} accent is hex`);
-  ok(p.artAlt.trim().length > 0, `${tag} artAlt non-empty`);
+  ok(p.mascot === `/mascots/${p.slug}.png`, `${tag} mascot path`);
+  ok(p.mascotAlt.trim().length > 0, `${tag} mascotAlt non-empty`);
+  ok(
+    existsSync(new URL(`./public${p.mascot}`, import.meta.url)),
+    `${tag} mascot file exists on disk`
+  );
   for (const f of p.features) ok(f.title.trim() && f.description.trim(), `${tag} feature complete`);
   for (const w of p.workflow) ok(w.title.trim() && w.description.trim(), `${tag} workflow step complete`);
   for (const i of p.integrations) {
@@ -111,10 +117,12 @@ contains(home, "Ten applications.", "home directory heading");
 contains(home, "SEC.03", "home ecosystem section");
 contains(home, "What we won&#x27;t claim", "home honesty box");
 for (const p of products) {
-  contains(home, p.name, `home card: ${p.slug}`);
+  contains(home, p.shortName ?? p.name, `home card: ${p.slug}`);
   contains(home, p.category, `home card category: ${p.slug}`);
   contains(home, `href="${productUrl(p.slug)}"`, `home card link: ${p.slug}`);
+  contains(home, `src="${p.mascot}"`, `home card mascot: ${p.slug}`);
 }
+contains(home, ">Materialist<", "materialist card shows shortName, not full name");
 
 const dir = renderRoute("/products");
 for (const p of products) contains(dir, p.name, `directory: ${p.slug}`);
@@ -131,6 +139,8 @@ for (const p of products) {
   contains(html, p.fullDescription.slice(0, 50), `${tag} full description`);
   contains(html, STATUS_LABELS[p.status], `${tag} status badge`);
   contains(html, "not yet available", `${tag} availability honesty note`);
+  contains(html, `src="${p.mascot}"`, `${tag} mascot image`);
+  contains(html, p.mascotAlt.slice(0, 40), `${tag} mascot alt`);
   contains(html, p.cta.label, `${tag} CTA label`);
   contains(html, "planned design intent", `${tag} integration honesty fine-print`);
   for (const f of p.features) contains(html, f.title, `${tag} feature: ${f.title.slice(0, 30)}`);
@@ -140,8 +150,8 @@ for (const p of products) {
   for (const i of p.integrations) {
     contains(html, `href="${productUrl(i.productSlug)}"`, `${tag} integration link → ${i.productSlug}`);
   }
-  // collect internal links
-  for (const m of html.matchAll(/href="([^"]*)"/g)) hrefs.add(m[1]);
+  // collect internal links (anchor tags only — skips React 19 <link rel="preload"> for images)
+  for (const m of html.matchAll(/<a[^>]*href="([^"]*)"/g)) hrefs.add(m[1]);
 }
 ok(routeCount === 10, `rendered 10 product pages`);
 
