@@ -64,6 +64,19 @@ export function ProductDetail() {
         </div>
       </section>
 
+      {/* Real app screenshot (or mascot art where no app exists yet),
+          placed directly above "01 — The problem". */}
+      <section className="section product-shot-section">
+        <div className="wrap">
+          <figure className="product-shot">
+            <img
+              src={product.screenshot ?? product.mascot}
+              alt={product.screenshotAlt ?? product.mascotAlt}
+            />
+          </figure>
+        </div>
+      </section>
+
       <section className="section">
         <div className="wrap narrow">
           <SectionLabel index="01" label="The problem" />
