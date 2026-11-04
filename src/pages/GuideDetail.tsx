@@ -76,6 +76,19 @@ export function GuideDetail() {
         </div>
       </section>
 
+      {product && (
+        <section className="section product-shot-section">
+          <div className="wrap">
+            <figure className="product-shot">
+              <img
+                src={product.screenshot ?? product.mascot}
+                alt={product.screenshotAlt ?? product.mascotAlt}
+              />
+            </figure>
+          </div>
+        </section>
+      )}
+
       <section className="section section-tint">
         <div className="wrap">
           <SectionLabel index="01" label="The workflow" />
