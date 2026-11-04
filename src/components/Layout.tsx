@@ -12,14 +12,6 @@ function ScrollToTop() {
   return null;
 }
 
-function BrandLockup() {
-  return (
-    <Link to="/" className="brand-lockup" aria-label="Clever Signal — home">
-      <img src="/logo.png" alt="Clever Signal" className="brand-lockup-img" />
-    </Link>
-  );
-}
-
 function FooterBadge() {
   return (
     <Link to="/" className="footer-badge-link" aria-label="Clever Signal — home">
@@ -31,8 +23,7 @@ function FooterBadge() {
 export function Header() {
   return (
     <header className="site-header">
-      <div className="header-inner">
-        <BrandLockup />
+      <div className="header-inner header-inner-nav-only">
         <nav aria-label="Primary">
           <ul>
             <li>
@@ -42,6 +33,9 @@ export function Header() {
             </li>
             <li>
               <NavLink to="/products">Products</NavLink>
+            </li>
+            <li>
+              <NavLink to="/guides">Guides</NavLink>
             </li>
             <li>
               <NavLink to="/about">About</NavLink>

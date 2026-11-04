@@ -14,6 +14,8 @@ import { Layout } from "./src/components/Layout.tsx";
 import { Home } from "./src/pages/Home.tsx";
 import { Products } from "./src/pages/Products.tsx";
 import { ProductDetail } from "./src/pages/ProductDetail.tsx";
+import { Guides } from "./src/pages/Guides.tsx";
+import { GuideDetail } from "./src/pages/GuideDetail.tsx";
 import { About } from "./src/pages/About.tsx";
 import { Contact } from "./src/pages/Contact.tsx";
 import { NotFound } from "./src/pages/NotFound.tsx";
@@ -22,6 +24,7 @@ import {
   getProduct,
   productUrl,
 } from "./src/data/products.ts";
+import { guides, guideUrl, getGuide } from "./src/data/guides.ts";
 import { STATUS_LABELS } from "./src/data/site.ts";
 
 let failures = 0;
@@ -46,6 +49,8 @@ function renderRoute(path: string): string {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:slug" element={<ProductDetail />} />
+          <Route path="/guides" element={<Guides />} />
+          <Route path="/guides/:slug" element={<GuideDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
@@ -119,9 +124,11 @@ for (const p of products) {
 const KNOWN_PATHS = new Set([
   "/",
   "/products",
+  "/guides",
   "/about",
   "/contact",
   ...products.map((p) => productUrl(p.slug)),
+  ...guides.map((g) => guideUrl(g.slug)),
 ]);
 const hrefs = new Set<string>();
 
@@ -183,11 +190,30 @@ ok(!/<form[\s>]/.test(contact), "contact page has no form element");
 const notFound = renderRoute("/does-not-exist-xyz");
 contains(notFound, "Nothing", "404 page renders");
 
+// ---------- Guides ----------
+const guidesPage = renderRoute("/guides");
+contains(guidesPage, "Learn the", "guides index heading");
+for (const g of guides) {
+  contains(guidesPage, g.title, `guides index lists ${g.slug}`);
+  const gh = renderRoute(guideUrl(g.slug));
+  contains(gh, g.title.split(":")[0], `guide page title: ${g.slug}`);
+  contains(gh, g.steps[0].title, `guide page first step: ${g.slug}`);
+  contains(gh, g.steps[g.steps.length - 1].title, `guide page last step: ${g.slug}`);
+  for (const banned of ["buy now", "available now", "now available", "$"]) {
+    ok(
+      !gh.toLowerCase().includes(banned),
+      `guide ${g.slug} has no banned claim ${JSON.stringify(banned)}`,
+    );
+  }
+  const gp = getProduct(g.productSlug);
+  ok(gp !== undefined, `guide ${g.slug} links a real product`);
+}
+
 // ---------- Brand assets: official logos ----------
-// Header uses the logo lockup, footer uses the badge; both render in the
-// shared Layout, so every SSR route carries them.
-contains(home, 'src="/logo.png"', "header brand lockup image");
-contains(home, 'alt="Clever Signal"', "header brand alt text");
+// Homepage hero carries the large logo lockup, footer uses the badge; both
+// render in the shared Layout/pages, so the SSR routes carry them.
+contains(home, 'src="/logo.png"', "home hero logo image");
+contains(home, 'alt="Clever Signal"', "home logo alt text");
 contains(home, 'src="/logo-badge.png"', "footer badge image");
 const aboutHtml = renderRoute("/about");
 contains(aboutHtml, 'src="/logo.png"', "about page features the lockup");

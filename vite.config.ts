@@ -2,6 +2,7 @@ import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import { SITE } from "./src/data/site.ts";
 import { orderedProducts, productUrl } from "./src/data/products.ts";
+import { guides, guideUrl } from "./src/data/guides.ts";
 
 /**
  * Emits sitemap.xml into the build output from the same centralized product
@@ -12,8 +13,9 @@ function sitemapPlugin(): Plugin {
     name: "clever-signal-sitemap",
     generateBundle() {
       const base = SITE.canonicalBase.replace(/\/$/, "");
-      const routes = ["/", "/products", "/about", "/contact"];
+      const routes = ["/", "/products", "/guides", "/about", "/contact"];
       for (const p of orderedProducts()) routes.push(productUrl(p.slug));
+      for (const g of guides) routes.push(guideUrl(g.slug));
       const today = new Date().toISOString().slice(0, 10);
       const urls = routes
         .map(
