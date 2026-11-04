@@ -12,15 +12,18 @@ function ScrollToTop() {
   return null;
 }
 
-function Wordmark() {
+function BrandLockup() {
   return (
-    <Link to="/" className="wordmark" aria-label="Clever Signal — home">
-      <span className="wordmark-signal" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-      </span>
-      Clever&nbsp;Signal
+    <Link to="/" className="brand-lockup" aria-label="Clever Signal — home">
+      <img src="/logo.png" alt="Clever Signal" className="brand-lockup-img" />
+    </Link>
+  );
+}
+
+function FooterBadge() {
+  return (
+    <Link to="/" className="footer-badge-link" aria-label="Clever Signal — home">
+      <img src="/logo-badge.png" alt="Clever Signal" className="footer-badge" />
     </Link>
   );
 }
@@ -29,7 +32,7 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Wordmark />
+        <BrandLockup />
         <nav aria-label="Primary">
           <ul>
             <li>
@@ -59,7 +62,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-inner">
         <div className="footer-brand">
-          <Wordmark />
+          <FooterBadge />
           <p>{SITE.tagline}</p>
           <p className="footer-note">
             Independent software for businesses that make, produce, sell, and

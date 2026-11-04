@@ -9,7 +9,7 @@ import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router";
 import { Routes, Route } from "react-router-dom";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import { Layout } from "./src/components/Layout.tsx";
 import { Home } from "./src/pages/Home.tsx";
 import { Products } from "./src/pages/Products.tsx";
@@ -87,6 +87,20 @@ for (const p of products) {
     existsSync(new URL(`./public${p.mascot}`, import.meta.url)),
     `${tag} mascot file exists on disk`
   );
+  // Real app screenshots: only present when captured from the running app.
+  // Never fabricated — stockroom/wardrobe and gated apps keep mascot art.
+  if (p.screenshot) {
+    const shotUrl = new URL(`./public${p.screenshot}`, import.meta.url);
+    ok(existsSync(shotUrl), `${tag} screenshot file exists on disk`);
+    ok(
+      statSync(shotUrl).size <= 400 * 1024,
+      `${tag} screenshot under 400KB`
+    );
+    ok(
+      (p.screenshotAlt ?? "").trim().length > 0,
+      `${tag} screenshotAlt non-empty`
+    );
+  }
   for (const f of p.features) ok(f.title.trim() && f.description.trim(), `${tag} feature complete`);
   for (const w of p.workflow) ok(w.title.trim() && w.description.trim(), `${tag} workflow step complete`);
   for (const i of p.integrations) {
@@ -118,9 +132,9 @@ contains(home, "SEC.03", "home ecosystem section");
 contains(home, "What we won&#x27;t claim", "home honesty box");
 for (const p of products) {
   contains(home, p.shortName ?? p.name, `home card: ${p.slug}`);
-  contains(home, p.category, `home card category: ${p.slug}`);
+  contains(home, p.shortCategory ?? p.category, `home card eyebrow: ${p.slug}`);
   contains(home, `href="${productUrl(p.slug)}"`, `home card link: ${p.slug}`);
-  contains(home, `src="${p.mascot}"`, `home card mascot: ${p.slug}`);
+  contains(home, `src="${p.screenshot ?? p.mascot}"`, `home card visual: ${p.slug}`);
 }
 contains(home, ">Materialist<", "materialist card shows shortName, not full name");
 
@@ -168,6 +182,26 @@ ok(!/<form[\s>]/.test(contact), "contact page has no form element");
 
 const notFound = renderRoute("/does-not-exist-xyz");
 contains(notFound, "Nothing", "404 page renders");
+
+// ---------- Brand assets: official logos ----------
+// Header uses the logo lockup, footer uses the badge; both render in the
+// shared Layout, so every SSR route carries them.
+contains(home, 'src="/logo.png"', "header brand lockup image");
+contains(home, 'alt="Clever Signal"', "header brand alt text");
+contains(home, 'src="/logo-badge.png"', "footer badge image");
+const aboutHtml = renderRoute("/about");
+contains(aboutHtml, 'src="/logo.png"', "about page features the lockup");
+// Favicon ships in the built index.html.
+{
+  const indexHtml = readFileSync(
+    new URL("./dist/index.html", import.meta.url),
+    "utf8",
+  );
+  ok(
+    indexHtml.includes('rel="icon" type="image/png" href="/logo-badge.png"'),
+    "favicon link in dist/index.html",
+  );
+}
 
 // ---------- 3. Internal link validation ----------
 let badLinks = 0;

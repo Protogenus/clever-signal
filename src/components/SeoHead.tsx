@@ -34,9 +34,11 @@ export function SeoHead({ title, description, structuredData }: SeoProps) {
     setMeta("property", "og:type", "website");
     setMeta("property", "og:url", canonical);
     setMeta("property", "og:site_name", SITE.name);
-    setMeta("name", "twitter:card", "summary");
+    setMeta("property", "og:image", `${SITE.canonicalBase}/logo-badge.png`);
+    setMeta("name", "twitter:card", "summary_large_image");
     setMeta("name", "twitter:title", title);
     setMeta("name", "twitter:description", description);
+    setMeta("name", "twitter:image", `${SITE.canonicalBase}/logo-badge.png`);
 
     let link = document.head.querySelector(
       'link[rel="canonical"]',
@@ -74,6 +76,7 @@ export const organizationJsonLd = {
   "@type": "Organization",
   name: SITE.name,
   url: SITE.canonicalBase,
+  logo: `${SITE.canonicalBase}/logo-badge.png`,
   slogan: SITE.tagline,
   description:
     "Clever Signal is an independent software company building specialized tools for " +

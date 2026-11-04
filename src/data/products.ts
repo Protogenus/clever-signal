@@ -58,6 +58,16 @@ export interface Product {
   seo: { title: string; description: string };
   /** Short display name used on product cards (falls back to name). */
   shortName?: string;
+  /** Short category for card eyebrows (falls back to category); never wraps. */
+  shortCategory?: string;
+  /**
+   * Real app screenshot for the card's large visual (public/screenshots/<slug>.png).
+   * Only set when captured from the actual running app — never fabricated.
+   * Falls back to the mascot tile when absent (e.g. unbuilt products).
+   */
+  screenshot?: string;
+  /** Honest alt text for the screenshot, e.g. "Materialist application window (in development)". */
+  screenshotAlt?: string;
   /** Brand color — one distinct Adobe-style color per product. */
   accent: string;
   /** Path to the dithered mascot image (public/mascots/<slug>.png). */
@@ -78,6 +88,7 @@ const FIRST_PRODUCTS: Product[] = [
     shortName: "Materialist",
     slug: "materialist",
     category: "Recipe costing & margin tracking",
+    shortCategory: "Recipe costing",
     status: "in-development",
     positioning:
       "Know what every product really costs to make — and be told the moment your margins move.",
@@ -366,6 +377,8 @@ const FIRST_PRODUCTS: Product[] = [
     },
     accent: "#84CC16",
     mascot: "/mascots/thrivepoint.png",
+    screenshot: "/screenshots/thrivepoint.png",
+    screenshotAlt: "Thrivepoint application window (in development)",
     mascotAlt:
       "Dithered brand tile for Thrivepoint: a realistic engraved rabbit portrait in black ink on solid lime green",
   },
@@ -376,7 +389,7 @@ const MIDDLE_PRODUCTS: Product[] = [
     id: "stockroom",
     name: "Stockroom",
     slug: "stockroom",
-    category: "Inventory & material management",
+    category: "Inventory Management",
     status: "coming-soon",
     positioning:
       "One honest record of every material, component, and finished good in the business.",
@@ -646,6 +659,8 @@ const MIDDLE_PRODUCTS: Product[] = [
     },
     accent: "#E04E1A",
     mascot: "/mascots/stagepoint.png",
+    screenshot: "/screenshots/stagepoint.png",
+    screenshotAlt: "StagePoint application window (in development)",
     mascotAlt:
       "Dithered brand tile for StagePoint: a realistic engraved beaver portrait in black ink on solid red-orange",
   },
@@ -654,6 +669,7 @@ const MIDDLE_PRODUCTS: Product[] = [
     name: "Orderly",
     slug: "orderly",
     category: "Order & fulfillment management",
+    shortCategory: "Order management",
     status: "in-development",
     positioning: "Every order, in order.",
     problem:
@@ -788,6 +804,8 @@ const MIDDLE_PRODUCTS: Product[] = [
     },
     accent: "#4C9A2A",
     mascot: "/mascots/orderly.png",
+    screenshot: "/screenshots/orderly.png",
+    screenshotAlt: "Orderly application window (in development)",
     mascotAlt:
       "Dithered brand tile for Orderly: a realistic engraved pigeon portrait in black ink on solid leaf green",
   },
@@ -796,6 +814,7 @@ const MIDDLE_PRODUCTS: Product[] = [
     name: "Elixer",
     slug: "elixer",
     category: "Recipe & formula management",
+    shortCategory: "Recipe management",
     status: "in-development",
     positioning:
       "Know what's in your product. Know how to make it. Know what it costs. Make it consistently.",
@@ -939,6 +958,8 @@ const MIDDLE_PRODUCTS: Product[] = [
     },
     accent: "#8B5CF6",
     mascot: "/mascots/elixer.png",
+    screenshot: "/screenshots/elixer.png",
+    screenshotAlt: "Elixer application window (in development)",
     mascotAlt:
       "Dithered brand tile for Elixer: a realistic engraved cat portrait in black ink on solid violet",
   },
@@ -950,6 +971,7 @@ const FINAL_PRODUCTS: Product[] = [
     name: "Cutline",
     slug: "cutline",
     category: "Cutting & layout optimization",
+    shortCategory: "Cutting optimization",
     status: "in-development",
     positioning:
       "Use less material. Waste less money. Get more out of every cut.",
@@ -1088,6 +1110,8 @@ const FINAL_PRODUCTS: Product[] = [
     },
     accent: "#D92B2B",
     mascot: "/mascots/cutline.png",
+    screenshot: "/screenshots/cutline.png",
+    screenshotAlt: "Cutline application window (in development)",
     mascotAlt:
       "Dithered brand tile for Cutline: a realistic engraved heron portrait in black ink on solid crimson",
   },
@@ -1095,7 +1119,7 @@ const FINAL_PRODUCTS: Product[] = [
     id: "sublium",
     name: "Sublium",
     slug: "sublium",
-    category: "Sublimation production & prepress",
+    category: "Sublimation prepress",
     status: "in-development",
     positioning:
       "The specialist's prepress bench for sublimation: artwork in, gang sheets out, every setting repeatable.",
@@ -1237,6 +1261,8 @@ const FINAL_PRODUCTS: Product[] = [
     },
     accent: "#C7369B",
     mascot: "/mascots/sublium.png",
+    screenshot: "/screenshots/sublium.png",
+    screenshotAlt: "Sublium application window (in development)",
     mascotAlt:
       "Dithered brand tile for Sublium: a realistic engraved chameleon portrait in black ink on solid magenta",
   },
@@ -1244,7 +1270,7 @@ const FINAL_PRODUCTS: Product[] = [
     id: "threadcount",
     name: "Threadcount",
     slug: "threadcount",
-    category: "Embroidery production intelligence",
+    category: "Embroidery production",
     status: "in-development",
     positioning:
       "Understand every embroidery file before it touches the machine — then plan the production around facts.",
@@ -1402,6 +1428,8 @@ const FINAL_PRODUCTS: Product[] = [
     },
     accent: "#0FA3A3",
     mascot: "/mascots/threadcount.png",
+    screenshot: "/screenshots/threadcount.png",
+    screenshotAlt: "Threadcount application window (in development)",
     mascotAlt:
       "Dithered brand tile for Threadcount: a realistic engraved spider portrait in black ink on solid teal",
   },
@@ -1410,6 +1438,7 @@ const FINAL_PRODUCTS: Product[] = [
     name: "Wardrobe",
     slug: "wardrobe",
     category: "Resale inventory management",
+    shortCategory: "Resale inventory",
     status: "coming-soon",
     positioning:
       "Every garment tracked from the moment you pick it up to the moment it sells — and after.",

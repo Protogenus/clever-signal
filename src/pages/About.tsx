@@ -30,6 +30,11 @@ export function About() {
             production decisions, and operational details that keep independent
             businesses moving.
           </p>
+          <img
+            src="/logo.png"
+            alt="Clever Signal — lighthouse mark and wordmark"
+            className="about-lockup"
+          />
         </div>
       </section>
 
