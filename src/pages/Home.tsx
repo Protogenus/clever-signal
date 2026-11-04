@@ -42,6 +42,7 @@ export function Home() {
 
       <section className="hero">
         <div className="hero-inner">
+          <img src="/logo.png" alt="Clever Signal" className="hero-logo" />
           <p className="kicker">Independent software company</p>
           <h1>
             Software for the <em>people who make things.</em>

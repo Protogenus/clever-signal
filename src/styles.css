@@ -195,6 +195,13 @@ svg {
   width: min(1120px, 92vw);
   margin: 0 auto;
 }
+.hero-logo {
+  width: min(340px, 78vw);
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  margin-bottom: 1.6rem;
+}
 .kicker {
   text-transform: uppercase;
   letter-spacing: 0.18em;
